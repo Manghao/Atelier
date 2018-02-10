@@ -8,15 +8,15 @@
         </div>
         <div class="descGeoquizz">
           <h1 class="display-4">Geo Quizz</h1>
-          <p class="lead">Le seul jeu qui te feras passer de bon moment. Enfin, un moyen de mélanger deux de tes passions, la geographie et le jeu.</p>
-          <p class="lead">C'est partie !</p>
+          <p class="lead">Le seul jeu qui te fera passer, de bons moments. Enfin, un moyen de mélanger deux de tes passions, la géographie et le jeu.</p>
+          <p class="lead">C'est parti !</p>
         </div>
       </div>
       <hr/>
 
     </div>
     <div class="bloc">
-      <h1>GeoQuizz Sign in</h1>
+      <h1>Geo Quizz Sign in</h1>
       <form @submit.prevent="signin()">
         <label for="email">Email</label>
         <input v-validate="'required|email'" type="email" v-model="members.mail" id="email" name="email" placeholder="Votre email .." required>
@@ -28,9 +28,9 @@
       </form>
     </div>
     <hr/>
-    <div>
-      <p>Vous n'avez pas de compte ? Allez vite, en créer un, en cliquant sur le lien suivant !</p>
-      <router-link class="btnCo" to="signup">Sign Up</router-link>
+    <div class="text-center">
+      <p>Vous n'avez pas de compte ? Allez vite en créer un, en cliquant sur le lien suivant !</p>
+      <router-link class="btnCo" to="signup">Inscrivez-vous</router-link>
     </div>
   </div>
 </template>
@@ -57,7 +57,7 @@
           router.push({name:"createSerie"})
         }).catch((error) => {
 
-          alert(error);
+          alert("Désole ! Il y a une erreur réseau.");
 
         })
       }
@@ -82,6 +82,9 @@
   a {
     color: #42b983;
   }
+  /*
+  Champs des inputs
+   */
   input[type=text], input[type=email], select {
     width: 100%;
     padding: 12px 20px;
@@ -106,7 +109,7 @@
     background-color: #ADD8E6;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 1% 24%;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -115,7 +118,9 @@
   input[type=submit]:hover {
     background-color: #ADD8E8;
   }
-
+/*
+Formulaire
+ */
   div {
     border-radius: 5px;
     background-color: white;
@@ -125,6 +130,9 @@
     background-color: #f2f2f2;
 
   }
+  /*
+  En-tête du site
+   */
   .img{
     background-color: cornflowerblue;
     align-items: flex-start;
